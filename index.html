@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wens Média — Mémoire, bien-être et regards sur le monde</title>
-<meta name="description" content="Wens Média explore le bien-être des aînés, la sagesse intergénérationnelle et l'actualité du Sahel, à travers le regard d'un journaliste entre Lyon et Abidjan.">
+<title>Wens Média — Racines, mémoire et regards sur le monde</title>
+<meta name="description" content="Wens Média réunit Racines — bien-être des aînés et transmission intergénérationnelle pour la diaspora africaine, indienne et chinoise — La Lettre de Wens et WENS Radio & TV.">
 
 <!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
       "name": "Wens Média",
       "url": "https://wensmedia.com/",
       "founder": { "@id": "https://wensmedia.com/#wens" },
-      "description": "Média indépendant francophone dédié au bien-être des aînés, à la transmission intergénérationnelle et à l'actualité du Sahel."
+      "description": "Média indépendant francophone qui réunit Racines (bien-être des aînés et transmission intergénérationnelle), La Lettre de Wens et WENS Radio & TV."
     },
     {
       "@type": "Person",
@@ -48,10 +48,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Qu'est-ce que Wens Média ?",
+          "name": "Qu'est-ce que Racines ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wens Média est un média indépendant francophone organisé autour de trois axes : le bien-être et l'autonomie des personnes de plus de 60 ans (BAPLA), la transmission intergénérationnelle à travers des portraits (Sagesse et Vitalité), et l'actualité géopolitique et spirituelle du Sahel (Regards sur le Sahel)."
+            "text": "Racines est le projet de Wens Média dédié au bien vieillir, à la santé et à la transmission intergénérationnelle, pensé pour les seniors en France et pour les diasporas africaine, indienne et chinoise. Il se décline en un site à rubriques et une newsletter hebdomadaire."
           }
         },
         {
@@ -60,14 +60,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Wens, de son nom complet Wenssembena Dieudonné Somé, est un journaliste et créateur de médias basé entre Lyon et Abidjan, originaire du pays Dagara au Burkina Faso. Il publie La Lettre de Wens sur Substack et développe WENS Radio et WENS TV."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que le BAPLA ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "BAPLA signifie Bien-être, Autonomie et Positivité pour les Aînés. C'est un pilier éditorial de Wens Média consacré aux conseils pratiques et au bien-être des personnes de 60 ans et plus."
           }
         }
       ]
@@ -83,12 +75,12 @@
     --encre: #241A14;
     --ivoire: #EFE4D0;
     --indigo-nuit: #2E3A46;
+    --vert-feuille: #4B6B3A;
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Work Sans', -apple-system, sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -105,26 +97,12 @@
 
   .motif-bande {
     height: 10px;
-    background: repeating-linear-gradient(
-      45deg,
-      var(--terre-cuite) 0 14px,
-      var(--or-savane) 14px 28px
-    );
+    background: repeating-linear-gradient(45deg, var(--terre-cuite) 0 14px, var(--or-savane) 14px 28px);
   }
 
-  header {
-    padding: 3.5rem 1.5rem 2.5rem;
-    max-width: 760px;
-    margin: 0 auto;
-  }
+  header { padding: 3.5rem 1.5rem 2.5rem; max-width: 760px; margin: 0 auto; }
 
-  .marque {
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: var(--terre-cuite);
-    letter-spacing: 0.01em;
-  }
+  .marque { font-family: var(--serif); font-weight: 600; font-size: 1.4rem; color: var(--terre-cuite); letter-spacing: 0.01em; }
 
   h1 {
     font-family: var(--serif);
@@ -132,41 +110,67 @@
     font-size: clamp(2.1rem, 5vw, 3.4rem);
     line-height: 1.15;
     margin: 1.5rem 0 1.2rem;
-    max-width: 15ch;
+    max-width: 16ch;
   }
 
-  .intro {
-    font-size: 1.2rem;
-    max-width: 62ch;
-    color: #46362B;
-  }
-
+  .intro { font-size: 1.2rem; max-width: 62ch; color: #46362B; }
   .intro strong { color: var(--encre); font-weight: 600; }
 
   main { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
 
-  section.pilier {
-    padding: 3rem 0;
-    border-top: 1px solid rgba(36, 26, 20, 0.15);
+  /* --- Bloc Racines --- */
+  section#racines { padding: 3rem 0 1rem; border-top: 1px solid rgba(36, 26, 20, 0.15); }
+
+  section#racines .sous-titre {
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--vert-feuille);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
   }
 
-  .pilier-motif {
-    width: 34px;
-    height: 34px;
-    margin-bottom: 1.2rem;
-  }
-
-  section.pilier h2 {
+  section#racines h2 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
+    color: var(--vert-feuille);
     margin-bottom: 0.9rem;
   }
 
-  section.pilier p {
-    max-width: 62ch;
-    font-size: 1.08rem;
+  section#racines > p { max-width: 62ch; font-size: 1.08rem; margin-bottom: 2rem; }
+
+  .rubriques {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2rem;
   }
+
+  .rubriques li {
+    background: rgba(75, 107, 58, 0.07);
+    border-left: 3px solid var(--vert-feuille);
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .rubriques strong { display: block; font-family: var(--serif); font-size: 1.1rem; margin-bottom: 0.3rem; color: var(--encre); }
+
+  .cta-racines {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    background: var(--vert-feuille);
+    color: var(--ivoire);
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .cta-racines:hover { background: var(--indigo-nuit); color: var(--ivoire); }
+
+  /* --- Autres projets --- */
+  section.pilier { padding: 2.5rem 0; border-top: 1px solid rgba(36, 26, 20, 0.15); }
 
   section.pilier .sous-titre {
     font-family: var(--sans);
@@ -176,35 +180,15 @@
     margin-bottom: 0.5rem;
   }
 
-  #bapla h2 { color: var(--terre-cuite); }
-  #sagesse h2 { color: #8A5A1E; }
+  section.pilier h2 { font-family: var(--serif); font-weight: 500; font-size: 1.7rem; margin-bottom: 0.7rem; }
+  section.pilier p { max-width: 62ch; font-size: 1.05rem; }
   #sahel h2 { color: var(--indigo-nuit); }
 
-  section#a-propos {
-    padding: 3.5rem 0;
-    border-top: 1px solid rgba(36, 26, 20, 0.15);
-  }
+  section#a-propos { padding: 3rem 0 3.5rem; border-top: 1px solid rgba(36, 26, 20, 0.15); }
+  section#a-propos h2 { font-family: var(--serif); font-weight: 500; font-size: 1.9rem; margin-bottom: 1rem; }
+  section#a-propos p { max-width: 62ch; font-size: 1.08rem; margin-bottom: 1rem; }
 
-  section#a-propos h2 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
-  }
-
-  section#a-propos p {
-    max-width: 62ch;
-    font-size: 1.08rem;
-    margin-bottom: 1rem;
-  }
-
-  .signature {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 1.15rem;
-    margin-top: 1.5rem;
-    color: var(--terre-cuite);
-  }
+  .signature { font-family: var(--serif); font-style: italic; font-size: 1.15rem; margin-top: 1.5rem; color: var(--terre-cuite); }
 
   .cta-lettre {
     display: inline-block;
@@ -218,7 +202,6 @@
     border-radius: 4px;
     text-decoration: none;
   }
-
   .cta-lettre:hover { background: var(--indigo-nuit); color: var(--ivoire); }
 
   footer {
@@ -229,12 +212,9 @@
     font-size: 0.95rem;
     color: #5A4A3D;
   }
-
   footer a { display: inline-block; margin-right: 1.5rem; margin-top: 0.5rem; }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -245,45 +225,34 @@
   <div class="marque">Wens Média</div>
   <h1>La mémoire, le bien-être et le monde, racontés avec sincérité.</h1>
   <p class="intro">
-    Wens Média rassemble les projets journalistiques de <strong>Wens</strong> — conseils pour bien vieillir,
-    portraits qui relient les générations, et regards sur l'actualité du Sahel — pensés pour les aînés
-    et la diaspora africaine, en France comme ailleurs.
+    Wens Média rassemble les projets journalistiques de <strong>Wens</strong> : <strong>Racines</strong>,
+    dédié au bien vieillir et à la transmission intergénérationnelle, <em>La Lettre de Wens</em>,
+    et des regards sur l'actualité du Sahel.
   </p>
 </header>
 
 <main>
 
-  <section class="pilier" id="bapla">
-    <svg class="pilier-motif" viewBox="0 0 34 34" aria-hidden="true">
-      <polygon points="17,2 32,17 17,32 2,17" fill="none" stroke="#B5502E" stroke-width="2.5"/>
-      <polygon points="17,10 25,17 17,24 9,17" fill="#C79A3D"/>
-    </svg>
-    <p class="sous-titre">Bien-être, Autonomie et Positivité pour les Aînés</p>
-    <h2>BAPLA</h2>
+  <section id="racines">
+    <p class="sous-titre">Le nouveau site de Wens Média</p>
+    <h2>Racines</h2>
     <p>
-      Des conseils concrets pour rester autonome, actif et serein après 60 ans — nourris de souvenirs
-      de Diébougou et de l'expérience du terrain, jamais de recettes toutes faites.
+      Un site à rubriques et une newsletter hebdomadaire pensés pour bien vieillir, rester en forme et
+      garder le lien avec ses racines — pour les seniors en France et pour les diasporas africaine,
+      indienne et chinoise.
     </p>
-  </section>
-
-  <section class="pilier" id="sagesse">
-    <svg class="pilier-motif" viewBox="0 0 34 34" aria-hidden="true">
-      <rect x="4" y="4" width="26" height="26" fill="none" stroke="#8A5A1E" stroke-width="2.5" transform="rotate(45 17 17)"/>
-      <circle cx="17" cy="17" r="5" fill="#C79A3D"/>
-    </svg>
-    <p class="sous-titre">Portraits intergénérationnels</p>
-    <h2>Sagesse et Vitalité</h2>
-    <p>
-      Des portraits qui font dialoguer les générations, dont la série <em>« Étrangers devenus Dagara »</em> —
-      une manière de préserver une mémoire orale avant qu'elle ne s'efface.
-    </p>
+    <ul class="rubriques">
+      <li><strong>Bien vieillir</strong>Conseils concrets pour rester autonome, actif et serein.</li>
+      <li><strong>Médecine &amp; avancées</strong>Ce qu'il faut savoir des progrès qui concernent la santé après 60 ans.</li>
+      <li><strong>Activités &amp; loisirs</strong>Des idées pour occuper son temps et rester en mouvement.</li>
+      <li><strong>Ailleurs &amp; autrefois</strong>Portraits et mémoires, dont la série « Étrangers devenus Dagara ».</li>
+      <li><strong>Art de vivre</strong>Plaisirs simples, cuisine, habitudes qui font du bien.</li>
+      <li><strong>Diasporas &amp; racines</strong>Le lien avec le pays d'origine, ici et là-bas.</li>
+    </ul>
+    <a class="cta-racines" href="#a-propos">Découvrir le projet</a>
   </section>
 
   <section class="pilier" id="sahel">
-    <svg class="pilier-motif" viewBox="0 0 34 34" aria-hidden="true">
-      <path d="M4 26 L17 4 L30 26 Z" fill="none" stroke="#2E3A46" stroke-width="2.5"/>
-      <line x1="10" y1="26" x2="24" y2="26" stroke="#2E3A46" stroke-width="2.5"/>
-    </svg>
     <p class="sous-titre">Actualité et spiritualité</p>
     <h2>Regards sur le Sahel</h2>
     <p>
